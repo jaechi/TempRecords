@@ -1,0 +1,5 @@
+
+Configure Fedora Database via the instructions on https://fedoraproject.org/wiki/PostgreSQL
+
+vim /var/lib/pgsql/data/pg_hba.conf
+ - change ident to md5 to use password
