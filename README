@@ -1,5 +1,16 @@
 
 Configure Fedora Database via the instructions on https://fedoraproject.org/wiki/PostgreSQL
 
+install the software
+
+postgresql-setup --initdb --unit postgresql
+systemctl  start postgresql
+su - postgres
+ psql
+\password postgres
+
+create user data with password 'password';
+create database thermometer owner data;
+
 vim /var/lib/pgsql/data/pg_hba.conf
  - change ident to md5 to use password
